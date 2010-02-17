@@ -1,0 +1,336 @@
+
+/* -----------------------------------------------
+Page Structure
+----------------------------------------------- */
+
+body {
+    font: normal 12px/1.6em "Arial", "Verdana", "Helvetica", sans-serif;
+    color: #666;
+    background-color: #E8F4DC;
+    margin: 0 auto;
+    text-align: center;
+}
+
+table {
+    font: normal 12px/1.6em "Arial", "Verdana", "Helvetica", sans-serif;
+    border-collapse: collapse;
+    background-color: transparent;
+    width: 100%;
+}
+
+div#wrapper {
+    width: 759px;
+    background-color: transparent;
+    margin: 0 auto;
+    text-align: center;
+}
+
+div#wrapper table#header {
+    color: #876645;
+    font: normal 11px/1.6em "Arial", "Verdana", "Helvetica", sans-serif;
+    height: 105px;
+}
+
+table#header a {
+    color: #876645;
+    font: normal 11px/1.6em "Arial", "Verdana", "Helvetica", sans-serif;
+}
+
+div#wrapper table#content 
+{
+    background-color: #CDE5D7;
+    border: solid 1px #CABC8F;
+    border-bottom: 0;
+    border-right: 0;
+}
+
+ul#nav
+{
+    padding: 0;
+    margin: 0 0 10px 0;
+    list-style: none;
+}
+
+ul#nav li
+{
+    padding: 0 20px 0 0;
+    display: inline;
+}
+
+ul#nav a
+{
+    text-decoration: none;
+    border: 0;
+}
+
+div#wrapper table#content td {
+    width: 100%;
+    text-align: left;
+    vertical-align: top;
+}
+
+h4 
+{
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #AD976F;
+    margin: 6px 0;
+}
+
+/* -----------------------------------------------
+Footer
+----------------------------------------------- */
+
+div#footer {
+    width: 759px;
+    background-color: transparent;
+    margin: 4px auto;
+    padding: 0 0 0 11px;
+    text-align: left;
+    font-size: 10px;
+}
+
+/* -----------------------------------------------
+Anchors
+----------------------------------------------- */
+
+a {
+    color: #AD976F;
+    text-decoration: none;
+    border-bottom: dotted 1px #AD976F;
+}
+
+a:hover {
+    border-bottom: solid 1px #AD976F;
+}
+
+h4 a
+{
+    color: #AD976F;
+    text-decoration: none;
+    border-bottom: dotted 1px #AD976F;
+}
+
+h4 a:hover
+{
+    border-bottom: solid 1px #AD976F;
+}
+
+div#footer a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: dotted 1px #000;
+}
+
+div#footer a:hover {
+    color: #000;
+    text-decoration: none;
+    border-bottom: solid 1px #000;
+}
+
+/* -----------------------------------------------
+Gallery
+----------------------------------------------- */
+
+ul.gallery {
+    margin: 0;
+    padding: 0;
+}
+
+ul.gallery li {
+    display: inline;
+    list-style: none;
+    padding-right: 4px;
+}
+
+div.gallery
+{
+    margin: 20px 0 10px 0;
+}
+
+ul.gallery li a img {
+    background-color: #FFF;
+    padding: 6px;
+    border: 0;
+    border: solid 1px #CABC8F;
+}
+
+div.gallery img {
+    background-color: #FFF;
+    padding: 10px;
+    border: solid 1px #CABC8F;
+}
+
+ul.gallery a, ul.gallery a:hover {
+    border: 0;
+}
+
+p.credit {
+    color: #AD976F; 
+    font-size: 10px; 
+    margin: 0 0 10px 0; 
+    text-align: right;
+}
+
+/* -----------------------------------------------
+Misc. Presentation Elements
+----------------------------------------------- */
+
+p, pre {
+    margin: .5em 0 1em 0;
+    padding: 0;
+}
+
+p.first {
+    margin: 0 0 1em 0;
+    padding: 0;
+}
+
+img, table#header a, table#header a:hover  {
+    border: 0;
+    text-decoration: none;
+}
+
+hr {
+    color: #AFACC9;
+    background-color: #FFF;
+}
+
+.green {
+    color: #497847;
+}
+
+.required {
+    color: #AD976F;
+}
+
+ul.subnav {
+    padding: 0;
+    margin: 4px 0 20px 0;
+    font-size: 10px;
+    line-height: 10px;
+    font-family: Arial, Helvetica, san-serif;
+    text-transform: uppercase;
+}
+
+ul.subnav li {
+    display: inline;
+    list-style-type: none;
+    border-top: none;
+    padding: 0 12px 0 0;
+    margin: 0;
+}
+
+ul.subnav a {
+    color: #CC6666;
+    text-decoration: none;
+    border: 0;
+}
+
+ul.subnav a:hover, ul.subnav a.active {
+    color: #336633;
+}
+
+/* -----------------------------------------------
+Form Elements
+----------------------------------------------- */
+
+form {
+    margin: 0;
+    padding: 0;
+}
+
+input, textarea, select {
+    font-family: verdana, helvetica, arial, sans-serif;
+    font-size: 10px;
+    color: #000;
+    background-color: #FFF;
+}
+
+input, textarea {
+    padding: 2px;
+    border: 1px solid #CCC;
+    border-color: #AAA #EBEAEA #EBEAEA #AAA;
+}
+
+.wide 
+{
+    width: 90%;
+}
+
+input.error, textarea.error {
+    border: solid 1px #FF4C35;
+}
+
+input[type="checkbox"], input[type="radio"], table.checkboxlist input {
+    margin: 0 4px 0 0;
+    border: solid 10px #FFF;
+}
+
+input.button {
+    color: #000;
+    background-color: #FFF;
+    border: 1px solid #CABC8F;
+    padding: 1px 3px 2px 3px;
+    background-color: #EBEAEA;
+}
+
+ul.form {
+    padding: 0;
+    margin: 0 0 10px 0;
+}
+
+ul.form li {
+    list-style-type: none;
+    border-top: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+ul.form h3 {
+    padding: 2px 0; 
+    width: 100%; 
+    border-bottom: solid 1px #333; 
+    background-color: #FFF;
+    color: #47ADE6;
+}
+
+ul.form table {
+    width: 100%;
+}
+
+ul.form th {
+    white-space: nowrap; 
+    padding: 2px 4px 2px 0;
+    text-align: left; 
+    vertical-align: top;
+    font-weight: normal;
+}
+
+ul.form td {
+    width: 100%; 
+    text-align: left; 
+    vertical-align: top;
+    padding: 2px 0 2px 2px;
+}
+
+ul.form li.action {
+    border-top: 1px solid #CABC8F;
+    margin-bottom: 0;
+    text-align: right;
+    padding-top: 8px;
+    font-size: 12px;
+}
+
+ul.form li.action input, ul.form li.action input:hover, ul.form li.action input:focus {
+    color: #666;
+    background-color: #E8F4DC;
+    border: 1px solid #CABC8F;
+}
+
+ul.form li input:hover, ul.form li input:focus {
+}
+
+p.error {
+    color: #FF4C35;         
+}

@@ -1,0 +1,141 @@
+<%
+  @id = params["id"].to_s
+  @photoId = params["photoid"].to_s
+
+  if @id == ''
+      @id = '7'
+  end
+
+  case @id
+  when '8'
+      @count = 16
+      @photographer = 'Kelly Burns Photography'
+      @galleryName = 'McBee Garden'
+      @url = 'http://www.kellyburnsphoto.com'
+  when '7'
+      @count = 16
+      @photographer = 'Mark Staff Photography'
+      @galleryName = 'Palmetto Bluff'
+      @url = 'http://www.markstaffphotography.com'
+  when '6'
+      @count = 15
+      @photographer = ''
+      @galleryName = 'Miscellaneous Setup Shots'
+      @url = ''
+  when '5'
+      @count = 8
+      @photographer = 'Leigh Webber Photography'
+      @galleryName = 'Miscellaneous Wedding Shots'
+      @url = 'http://www.ltwebber.com'
+  when '4'
+      @count = 12
+      @photographer = 'Taylor Stewart Photography'
+      @galleryName = 'Spring 2005'
+      @url = 'http://www.taylorstewartphotography.com'
+  when '3'
+      @count = 20
+      @photographer = 'Taylor Stewart Photography'
+      @galleryName = 'Windfall Pond'
+      @url = 'http://www.taylorstewartphotography.com'
+  when '2'
+      @count = 16
+      @photographer = 'Art of Vision'
+      @galleryName = 'The William Aiken House'
+      @url = 'http://www.artofvision.net'
+  when '1'
+      @count = 12
+      @photographer = 'Charles Tumbleston Photography'
+      @galleryName = 'The Mills House Hotel'
+      @url = 'http://www.charlestumbleston.com'
+  end
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>Kate Badger Special Events - Photo Gallery</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="description" content="" />
+	<meta name="keywords" content="" />
+	<meta name="author" content="P. Barrett Little" />
+	<link rel="stylesheet" type="text/css" href="/stylesheets/screen.css" />
+</head>
+<body>
+  <div id="wrapper">
+    <%= erb(:'/shared/header') %>
+    <table id="content" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="padding: 10px 6px 10px 18px; border-bottom: solid 1px #CABC8F; border-right: solid 1px #CABC8F;">
+              <%= erb(:'/shared/navigation') %>
+                <% if @photoId == '' %>
+
+                <h4>Galleries</h4>
+
+                <ul class="gallery" style="margin-top: 8px;">
+                <% (1..4).each do|i| %>
+                    <li><a href="?id=7&photoid=<%= i %>"><img src="/images/upload/albums/7/<%= i %>_t.jpg" width="60" height="60" alt="" /></a></li>
+                <% end %>
+                </ul>
+                <a href="?id=7&photoid=1">Palmetto Bluff &raquo;</a>
+
+                <ul class="gallery" style="margin-top: 8px;">
+                <% (1..4).each do|i| %>
+                    <li><a href="?id=3&photoid=<%= i %>"><img src="/images/upload/albums/3/<%= i %>_t.jpg" width="60" height="60" alt="" /></a></li>
+                <% end %>
+                </ul>
+                <a href="?id=3&photoid=1">Windfall Pond &raquo;</a>
+
+                <ul class="gallery" style="margin-top: 8px;">
+                <% (1..4).each do|i| %>
+                    <li><a href="?id=2&photoid=<%= i %>"><img src="/images/upload/albums/2/<%= i %>_t.jpg" width="60" height="60" alt="" /></a></li>
+                <% end %>
+                </ul>
+                <a href="?id=2&photoid=1">The William Aiken House &raquo;</a>
+
+                <ul class="gallery" style="margin-top: 8px;">
+                <% (1..4).each do|i| %>
+                    <li><a href="?id=8&photoid=<%= i %>"><img src="/images/upload/albums/8/<%= i %>_t.jpg" width="60" height="60" alt="" /></a></li>
+                <% end %>
+                </ul>
+                <a href="?id=8&photoid=1">McBee Garden &raquo;</a>
+
+                <% else %>
+
+                <h4><%= @galleryName %></h4>
+
+                <ul class="gallery">
+                <% (1..@count).each do|i| %>
+                    <li><a href="?id=<%= @id %>&photoid=<%= i %>"><img src="/images/upload/albums/<%= @id %>/<%= i %>_t.jpg" width="60" height="60" alt="" /></a></li>
+                <% end %>
+                </ul>
+                <p><a href="/gallery/">&laquo; Back to Galleries</a></p>
+
+                <% end %>
+
+            </td>
+            <td style="border-bottom: solid 1px #CABC8F; border-right: solid 1px #CABC8F; vertical-align: middle; text-align: center;">
+                <div class="gallery" style="width: 409px; text-align: center; background-color: transparent;">
+
+                <% if @photoId == '' %>
+                    <img src="/images/upload/albums/<%= @id %>/1.jpg" alt="" />
+                <% else %>
+                    <img src="/images/upload/albums/<%= @id %>/<%= @photoId %>.jpg" alt="" />
+                <% end %>
+
+                <% if @photographer != '' %>
+                    <p style="color: #666; font-size: 10px;"><a href="<%= @url %>" target="_blank" class="credit">Photograph by <%= @photographer %></a></p>
+                <% end %>
+                </div>
+              </td>
+          </tr>
+      </table>
+      <table id="footer" cellpadding="0" cellspacing="0">
+        <tr>
+          <td style="border-right: solid 1px #CABC8F;"><img src="/images/leafFooter.gif" width="340" height="96" alt="" /></td>
+          <td style="width: 410px; vertical-align: top; padding-top: 15px">
+            <img src="/images/quotes/quote_brooks.gif" width="390" height="50" alt="" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
